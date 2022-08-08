@@ -2,11 +2,13 @@ package kr.idus.homework.order.entity;
 
 import kr.idus.homework.member.entity.Member;
 import kr.idus.homework.product.entity.Product;
+import lombok.Getter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Getter
 @Table(name = "ORDER")
 public class Order {
 

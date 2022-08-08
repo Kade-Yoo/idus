@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface MemberService {
 
-    MemberResponse join(MemberRequest memberRequest);
-    MemberResponse login(MemberRequest memberRequest);
-    MemberResponse logout(MemberRequest memberRequest);
+    MemberResponse join(MemberRequest request);
+    MemberResponse getMember(String email);
     List<MemberResponse> search(MemberRequest request);
+
 }

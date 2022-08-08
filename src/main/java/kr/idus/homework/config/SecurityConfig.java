@@ -35,8 +35,8 @@ public class SecurityConfig {
                 .csrf().disable()
                 .addFilterBefore(corsFilter, UsernamePasswordAuthenticationFilter.class)
                 .exceptionHandling()
-                .authenticationEntryPoint(jwtAuthenticationEntryPoint) // 우리가 만든 클래스로 인증 실패 핸들링
-                .accessDeniedHandler(jwtAccessDeniedHandler) // 커스텀 인가 실패 핸들링
+                .authenticationEntryPoint(jwtAuthenticationEntryPoint)
+                .accessDeniedHandler(jwtAccessDeniedHandler)
                 .and()
                 .headers()
                 .frameOptions()
@@ -45,11 +45,11 @@ public class SecurityConfig {
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
+                .antMatcher("/swagger-ui/**")
                 .authorizeHttpRequests()
+                .antMatchers("/api/member/login", "/api/member/logout", "/api/member/join").permitAll()
                 .anyRequest().authenticated()
                 .and().apply(new JwtSecurityConfig(tokenProvider));
-
         return http.build();
     }
-
 }

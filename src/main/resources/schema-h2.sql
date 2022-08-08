@@ -1,0 +1,23 @@
+CREATE TABLE MEMBER (
+    id numeric NOT NULL AUTO_INCREMENT,
+    name VARCHAR(20) NOT NULL ,
+    nickname VARCHAR(30) NOT NULL ,
+    password VARCHAR(30) NOT NULL ,
+    phone VARCHAR(20) NOT NULL ,
+    email VARCHAR(100) NOT NULL ,
+    authority VARCHAR(10) NOT NULL ,
+    sex
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE ORDER (
+    id numeric NOT NULL AUTO_INCREMENT,
+    order_no VARCHAR(12) NOT NULL ,
+    product_id numeric NULL ,
+    order_date DATE NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE PRODUCT (
+   id numeric NOT NULL AUTO_INCREMENT,
+   product_no VARCHAR(12) NOT NULL ,
+   product_nm VARCHAR(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

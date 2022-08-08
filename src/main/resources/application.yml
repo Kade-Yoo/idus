@@ -16,7 +16,6 @@ spring:
       schema-locations: classpath:schema-h2.sql
       platform: h2
       mode: always
-  #      data-locations: classpath:data-h2.sql
 
   mvc:
     pathmatch:
