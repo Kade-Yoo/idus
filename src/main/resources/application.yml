@@ -1,7 +1,4 @@
 spring:
-  config:
-    activate:
-      on-profile: development
   h2:
     console:
       enabled: true
@@ -17,9 +14,15 @@ spring:
   sql:
     init:
       schema-locations: classpath:schema-h2.sql
+      platform: h2
       mode: always
   #      data-locations: classpath:data-h2.sql
 
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+
+  jwt:
+    header: Authorization
+    secret: eWhtOTIwN2FzamZpYXNqZGZpc2FqZGYxMjMxMjMxMjMK
+    access-token-validity-in-seconds: 600

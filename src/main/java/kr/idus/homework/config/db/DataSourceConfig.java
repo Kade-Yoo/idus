@@ -1,6 +1,7 @@
 package kr.idus.homework.config.db;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitialization;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy;

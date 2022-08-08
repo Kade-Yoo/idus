@@ -1,5 +1,6 @@
 package kr.idus.homework.member.controller;
 
+import io.swagger.annotations.ApiImplicitParam;
 import kr.idus.homework.member.model.MemberRequest;
 import kr.idus.homework.member.model.MemberResponse;
 import kr.idus.homework.member.service.MemberService;
