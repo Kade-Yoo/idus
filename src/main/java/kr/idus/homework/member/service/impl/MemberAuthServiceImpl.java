@@ -2,7 +2,6 @@ package kr.idus.homework.member.service.impl;
 
 import kr.idus.homework.config.jwt.TokenProvider;
 import kr.idus.homework.member.model.MemberRequest;
-import kr.idus.homework.member.repository.MemberRepository;
 import kr.idus.homework.member.service.MemberAuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
